@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ArpClimb — four-bar climbing arpeggio desk</title>
+  <meta name="description" content="Four live-instrument bars of rising arpeggios so a static chord loop finishes." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+<main>
+  <p class="eyebrow">WorkinWithAI · live chairs</p>
+  <h1>ArpClimb</h1>
+  <p class="lead">Four-bar climbing arpeggio desk. Generators leave block chords. Session players write rising arpeggios on piano and nylon so the loop finishes. Live piano, nylon, upright, kit, violin.</p>
+  <p class="status" id="status">Tap to start audio · seating chairs…</p>
+  <div class="controls">
+    <label>BPM <input type="number" id="bpm" min="60" max="180" value="96"></label>
+    <label>Key <select id="key"><option>A minor</option><option>C major</option><option>D minor</option><option>E major</option><option>G major</option></select></label>
+    <label>Chords <input type="text" id="chords" value="Am F C G" placeholder="Am F C G"></label>
+  </div>
+  <p class="eyebrow">Groove</p>
+  <div class="row" id="grooves"></div>
+  <p class="eyebrow">Arp climb</p>
+  <div class="row" id="recipes"></div>
+  <p class="eyebrow">Form · 4 bars climbing arp</p>
+  <div class="bars" id="bars"></div>
+  <h2>Punch list</h2>
+  <pre id="punch"></pre>
+  <div class="exports">
+    <button id="exportWav">Export WAV (looped)</button>
+    <button id="exportMidi">Export MIDI</button>
+  </div>
+</main>
+<div class="dock">
+  <button id="play">Play</button>
+  <button class="ghost" id="stop">Stop</button>
+  <button class="ghost" id="copy">Copy punch</button>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
